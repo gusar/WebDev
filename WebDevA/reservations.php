@@ -21,6 +21,6 @@ if(isset($_POST['return']) || isset($_POST['reserve'])) {
 
 	mysql_close($conn);
 
-	if(basename($_SERVER['PHP_SELF']) == "main.php") header("location: main.php");
+	if(basename($_SERVER['PHP_SELF']) == "index.php") header("location: index.php");
 }
 ?>

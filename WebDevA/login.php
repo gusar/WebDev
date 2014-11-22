@@ -6,7 +6,7 @@
 				echo "Wrong username or password";
 			}
 			elseif (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-				header("location: main.php");
+				header("location: index.php");
 			}
 		?>
 

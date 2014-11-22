@@ -4,7 +4,7 @@
 	if(isset($_POST['submit'])) {
 		Login();
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-			header("location: main.php");
+			header("location: index.php");
 		}
 		else header("location: login.php");
 	}

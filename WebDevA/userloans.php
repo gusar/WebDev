@@ -23,7 +23,7 @@
 		echo "</li><li>Date: ";
 		echo ($row[3]);
 		echo "</li><li>";
-		echo "<form method='POST' action='main.php?return=1'>";
+		echo "<form method='POST' action='index.php?return=1'>";
 		echo "<input type='hidden' name='return' value='".$row[2]."'>";
 		echo "<input type='submit' name='button' value='Return'></form>";
 		echo "</li></ul></td>";

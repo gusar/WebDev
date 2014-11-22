@@ -12,7 +12,7 @@
 		</div>
 
 		<div id="header_menu">
-			<a href="main.php"><img class="buttons" src="main.png" alt="Home Page"></a>
+			<a href="index.php"><img class="buttons" src="index.png" alt="Home Page"></a>
 			<a href="search.php"><img class="buttons" src="search.png" alt="Search"></a> 
 			<a href="logout.php"><img class="buttons" src="logout.png" alt="Logout"></a> 
 		</div>
