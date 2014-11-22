@@ -1,0 +1,29 @@
+2016 Rio Olympics Website Design Concepts
+
+The website will be based on a number of frontend and
+backend technologies.
+First of all, a server-side backend must be built.
+It will will most likely cosist of an apache2 or nginx
+web server with a (hopefully) custom built admin panel
+tools for managing content. The panel will need a
+database (mysql) server and an ftp server to function
+successfully. Possible choice of technologies includes
+JSP, ASP, PHP, Cold Fusion, CGI.
+The client side will use multiple technologies
+available includeing JavaScript, VBScript /Jscript,
+dynamic HTML, JQuery, PHP, Python.
+The website will be based on templates which will be
+able to have information plugged into them from the
+ftp and database part of backend. The frontend will be
+written in HTML/XHTML/XML/CSS combo with heavy
+javascript usage in order to allow advanced visual design capabilities.
+The top of the website will have a tab style layout
+for a quick reference to any part of the available
+information of the website.The Design will be tile
+based where tiles will alternate beteen heading style
+and tiles with details about competitions etc.
+Forms will be available thorughout the design for
+client convenience of narowing down the information
+based on their interest.
+On top of the clientside side there needs to be a
+mobile frontend aimed at small screens.
