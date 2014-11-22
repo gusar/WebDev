@@ -13,7 +13,9 @@ body {
 }
 
 fieldset {
-	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 21%;
 }
 
 #search-form {
@@ -54,7 +56,7 @@ fieldset {
 #header_menu {
 	width: 20%;
 	margin-top: 11px;
-	margin-left: 41.3%;
+	margin-left: 41.6%;
 	position: absolute;
 }
 
@@ -64,10 +66,6 @@ fieldset {
 	margin-top: 16px;
 	position: relative;
 
-}
-
-.return-button {
-	text-decoration: none;
 }
 
 .buttons {
@@ -99,16 +97,6 @@ td, th {
 	box-shadow: 0px 2px 2px #555555;
 }
 
-#body-login-register {
-	margin-left: auto;
-	margin-right: auto;
-	width: 450px;
-}
-
-.reg {
-	border: 0px;
-}
-
 #results {
 	background-color: #FFFFFF;
 	text-align: left;
@@ -128,9 +116,20 @@ td, th {
 	text-align: center;
 }
 
-#register_button {
-	margin-top: 30px;
-	margin-left: 150px;
+#register {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#register-table {
+	border: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#reg-submit {
+	text-align: center;
+	padding-top: 20px;
 }
 
 #button {

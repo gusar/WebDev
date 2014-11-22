@@ -1,6 +1,6 @@
 <?php include("header.php"); ?>
 
-	<div id="body-login-register">
+	<div>
 		<?php
 			if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {
 				echo "Wrong username or password";
