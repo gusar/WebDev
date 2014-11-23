@@ -1,7 +1,7 @@
 <?php include("header.php"); ?>
 
 <div>
-	<form action="register.php" method="post">
+	<form id="register-form" action="register.php" method="post">
 
 		<h2 style="text-align:center">Registration</h2>
 

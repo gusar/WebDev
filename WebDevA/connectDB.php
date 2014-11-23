@@ -1,7 +1,7 @@
 <?php
 	$HOST = 'localhost';
 	$UNAME = 'root';
-	$PASS = "';l=-0";
+	$PASS = "";
 	$DBNAME = 'library';
 
 	$conn = mysql_connect($HOST, $UNAME, $PASS) 
