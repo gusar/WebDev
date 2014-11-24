@@ -53,7 +53,7 @@ else {
 		echo($row[4]);
 		echo "</td><td>";
 		if($row[6] == "N") {
-			echo "<form method='POST' action='index.php?reserve=1'>";
+			echo "<form method='POST' action='index.php'>";
 			echo "<input type='hidden' name='reserve' value='".$row[0]."'>";
 			echo "<input type='submit' name='button' value='Reserve'></form>";
 		}
