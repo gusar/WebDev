@@ -11,7 +11,7 @@ fieldset {
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
-	width: 10%;
+	width: 13%;
 }
 
 #search-form {
@@ -23,10 +23,6 @@ fieldset {
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-#search-options, #login-div {
-	text-align: center;
 }
 
 #search-results {
@@ -49,13 +45,6 @@ fieldset {
 	margin-bottom: 20px;
 }
 
-#header_menu {
-	width: 20%;
-	margin-top: 11px;
-	margin-left: 41.0%;
-	position: absolute;
-}
-
 #hi {
 	width: 200px;
 	margin-left: 62%;
@@ -65,13 +54,16 @@ fieldset {
 }
 
 .buttons {
-	box-shadow: 0px 3px 2px #555555;
-	margin-left: 8px;
-	margin-right: 8px;
+	box-shadow: 0px 2px 2px #555555;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-td, th {
-	padding: 8px;
+#header_menu {
+	width: 24%;
+	margin-top: 11px;
+	margin-left: 41.0%;
+	position: absolute;
 }
 
 #header {
@@ -93,6 +85,10 @@ td, th {
 	box-shadow: 0px 2px 2px #555555;
 }
 
+td, th {
+	padding: 8px;
+}
+
 #results {
 	background-color: #FFFFFF;
 	text-align: left;
@@ -102,7 +98,7 @@ td, th {
 	margin-right: auto;
 }	
 
-.body-home, #register-form {
+.body-home, #register-form, #search-options, #login-div {
 	text-align: center;
 }
 
