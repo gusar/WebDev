@@ -1,13 +1,23 @@
-<?php include("header.php"); ?>
-	<div id="search-options">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library search</title>
+	<link rel="stylesheet" type="text/css" href="library.css">
+	<meta charset="UTF-8"> 
+	<?php include("header.php"); ?>
+</head>
+<body>
+<div id="containter">
+
+	<div id="body">
 		<?php include("checksession.php"); ?>
 
 		<h2>Search Options</h2>
 
 		<form id="search-form" method="GET" action="search.php">
 			Search:
-			<input name="search" type="text" size="27"></input>
-			<p>Categories:</p>
+			<input id="search-field" name="search" type="text" size="20"></input>
+			<br>Categories:<br>
 		<table id="search-table" border="0">
 			<tr>
 				<td>Health</td><td>
@@ -32,9 +42,8 @@
 		</table>
 		<input id="search-button" type="submit" name="submit" value="Search">
 		</form>
-	</div>
 	
-	<div id="body-search">
+	<div>
 		<table id="search-results" border="1" border-collapse="collapse">
 		<tr><th>ISBN</th>
 		<th>TITLE</th>
@@ -44,6 +53,9 @@
 		<th>OPTION</th></tr>
 		<?php include("searchSQL.php"); ?>
 	</div>
+	</div>
 
+	<?php include("footer.php"); ?>
+</div>
 </body>
-</html>
+</html> 

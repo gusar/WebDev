@@ -1,6 +1,15 @@
-<?php include("header.php"); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library - Login</title>
+	<link rel="stylesheet" type="text/css" href="library.css">
+	<meta charset="UTF-8"> 
+	<?php include("header.php"); ?>
+</head>
+<body>
+<div id="containter">
 
-	<div id="login-div">
+	<div id="body">
 		<?php
 			if(isset($_GET['r']) && $_GET['r'] == 1) echo "Registration successful";
 			
@@ -25,5 +34,7 @@
 		</fieldset>
 	</div>
 
+	<?php include("footer.php"); ?>
+</div>
 </body>
-</html>
+</html> 

@@ -1,6 +1,15 @@
-<?php include("header.php"); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="library.css">
+	<meta charset="UTF-8"> 
+	<?php include("header.php"); ?>
+</head>
+<body>
+<div id="containter">
 
-<div>
+<div id="body">
 	<form id="register-form" action="register.php" method="post">
 
 		<h2 style="text-align:center">Registration</h2>
@@ -54,7 +63,10 @@
 			</td></tr>
 		</table>
 
-	</form>		
+	</form>	
+</div>
+
+<?php include("footer.php"); ?>
 </div>
 </body>
-</html>
+</html> 

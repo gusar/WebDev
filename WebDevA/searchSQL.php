@@ -1,6 +1,6 @@
 <?php
 if(!isset($_GET['search']) && !isset($_GET['s'])) {
-	echo '<tr><td colspan="6">Ready to search</td></tr>';
+	echo '<tr><td colspan="6">Use options above or hit search button for a full list</td></tr>';
 	echo "</table>";
 }
 

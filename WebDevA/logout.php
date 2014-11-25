@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library - Logout</title>
+	<link rel="stylesheet" type="text/css" href="library.css">
+	<meta charset="UTF-8"> 
 	<?php	include("header.php"); ?>
+</head>
+<body>
+<div id="containter">
 
-	<div id="body-logout">
+	<div id="body">
 		<?php include("checksession.php"); ?>
 		<?php 
 			if(session_destroy()) {
@@ -12,5 +21,7 @@
 
 	</div>
 
+	<?php include("footer.php"); ?>
+</div>
 </body>
 </html> 
