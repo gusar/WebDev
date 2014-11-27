@@ -15,6 +15,7 @@
 			
 			if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {
 				echo "Wrong username or password";
+				session_destroy();
 			}
 			elseif (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 				header("location: index.php");

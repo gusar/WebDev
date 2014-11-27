@@ -10,15 +10,12 @@
 <div id="containter">
 
 	<div id="body">
-		<?php include("checksession.php"); ?>
-		<?php 
+		<?php include("checksession.php");
 			if(session_destroy()) {
 				echo "You have logged out successfully";
 			}
 		?>
-		
 		<br><br><a id="login" name="Login" href='login.php'>Login</a><br>
-
 	</div>
 
 	<?php include("footer.php"); ?>

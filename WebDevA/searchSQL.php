@@ -19,15 +19,16 @@ else {
 	$back = $cur - $limit;
 	$next = $cur + $limit;
 
-	$query = "SELECT * FROM Books WHERE (isbn LIKE '%$search%' 
-								OR bookTitle LIKE '%$search%' OR author LIKE '%$search%' 
-								OR edition LIKE '%$search%' OR year LIKE '%$search%')";
-
-	if(isset($_GET['cat']) && $_GET['cat'] != 0) {
-		$cat = (int)$_GET['cat'];
-		$query = $query." AND categoryID=".$cat;
+	if(isset($_GET['cat']) && $_GET['cat'] != "") {
+		$cat = $_GET['cat'];
 	}
-	else $cat = 0;
+	else $cat = "%";
+
+	$query = "SELECT * FROM Books WHERE (isbn LIKE '%$search%' 
+												OR bookTitle LIKE '%$search%' 
+												OR author LIKE '%$search%' 
+												OR year LIKE '%$search%') 
+												AND categoryID LIKE '$cat'";
 
 	$search_result = mysql_query($query);
 	$num_rows = mysql_num_rows($search_result);
@@ -54,7 +55,7 @@ else {
 		echo "</td><td>";
 		if($row[6] == "N") {
 			echo "<form method='POST' action='index.php'>";
-			echo "<input type='hidden' name='reserve' value='".$row[0]."'>";
+			echo "<input type='hidden' name='reserve' value='$row[0]'>";
 			echo "<input type='submit' name='button' value='Reserve'></form>";
 		}
 		else echo "Not available";

@@ -1,8 +1,7 @@
 <?php
 	include("connectDB.php");
 
-	$result = mysql_query("SELECT bookTitle, author, isbn, reservedDate, 
-								reserved_username, reserved_isbn 
+	$result = mysql_query("SELECT bookTitle, author, isbn, reservedDate 
 								FROM Reservations, Books 
 								WHERE Reservations.reserved_username = '$_SESSION[user]' 
 								AND Reservations.reserved_isbn = Books.isbn");
@@ -24,7 +23,7 @@
 		echo ($row[3]);
 		echo "</li><li>";
 		echo "<form method='POST' action='index.php?return=1'>";
-		echo "<input type='hidden' name='return' value='".$row[2]."'>";
+		echo "<input type='hidden' name='return' value='$row[2]'>";
 		echo "<input type='submit' name='button' value='Return'></form>";
 		echo "</li></ul></td>";
 		$counter++;
