@@ -14,6 +14,7 @@
 
 		<h2>Search Options</h2>
 
+		<!-- Form includes all search options -->
 		<form id="search-form" method="GET" action="search.php">
 			Search:
 			<input id="search-field" name="search" type="text" size="20"></input>
@@ -43,6 +44,7 @@
 		<input id="search-button" type="submit" name="submit" value="Search">
 		</form>
 	
+	<!-- Results table -->
 	<div>
 		<table id="search-results" border="1" border-collapse="collapse">
 		<tr><th>ISBN</th>
@@ -51,6 +53,7 @@
 		<th>EDITION</th>
 		<th>YEAR</th>
 		<th>OPTION</th></tr>
+		<!-- Handle search user input -->
 		<?php include("searchSQL.php"); ?>
 	</div>
 	</div>

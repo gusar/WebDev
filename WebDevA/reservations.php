@@ -1,4 +1,6 @@
 <?php
+/* Handle reservation of a book or return of a book */
+/* Craft two queries to suit respective action */
 if(isset($_POST['return']) || isset($_POST['reserve'])) {
 	include("connectDB.php");
 

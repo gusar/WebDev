@@ -1,7 +1,9 @@
 <?php
+/* Execute if user presses register button */
 if(isset($_POST['register'])) {
 	$value = validate();
 
+	/* Check if an error occured */
 	switch($value) {
 		case 0:
 			header("location: login.php?r=1");
@@ -40,12 +42,12 @@ function validate() {
 	if($_POST["rmobile"]) $mobile = $_POST["rmobile"];
 
 	// Check if phone numbers are numeric or too long
-	if(!preg_match("#[0-9]+#", $tel) || strlen($tel) > 10) {
+	if(!is_numeric($tel) || strlen($tel) > 10) {
 		return(2);
 	}
 
 	if(isset($mobile)) { 
-		if(!preg_match("#[0-9]+#",$mobile) || strlen($mobile) > 10) {
+		if(!is_numeric($mobile) || strlen($mobile) > 10) {
 			return(2);
 		}
 	}
@@ -55,6 +57,7 @@ function validate() {
 		return(3);
 	}
 
+	// Check if username is under 20 chars
 	if(strlen($user) > 20) {
 		return(4);
 	}

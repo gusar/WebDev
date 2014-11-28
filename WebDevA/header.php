@@ -2,6 +2,7 @@
 		<div id="header_top">
 			<strong id="heading">Library</strong>
 			<div id="hi">
+				<!-- Display welcome message -->
 				<?php
 					session_start();
 					if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
@@ -11,6 +12,7 @@
 			</div>
 		</div>
 
+		<!-- Menu -->
 		<div id="header_menu">
 			<a href="index.php"><img class="buttons" src="index.png" width="65" height="26" alt="Home Page"></a>
 			<a href="search.php"><img class="buttons" src="search.png" width="65" height="26" alt="Search"></a> 

@@ -15,6 +15,7 @@
 	
 	<div id="body">
 		<h2>Reserved Books</h2>
+		<!-- Create table with user reservations -->
 		<?php include("userloans.php"); ?>
 	</div>
 

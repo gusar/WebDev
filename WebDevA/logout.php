@@ -9,6 +9,7 @@
 <body>
 <div id="containter">
 
+<!-- Logout user and destroy session -->
 	<div id="body">
 		<?php include("checksession.php");
 			if(session_destroy()) {

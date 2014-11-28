@@ -1,4 +1,5 @@
 <?php
+	/* Connect to the database */
 	$HOST = 'localhost';
 	$UNAME = 'root';
 	$PASS = "";

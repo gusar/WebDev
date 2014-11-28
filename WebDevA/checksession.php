@@ -1,4 +1,5 @@
 	<?php
+		/* Check if session has been started, if not: start one */
 		if (session_status() == PHP_SESSION_NONE) {
     		session_start();
 		}

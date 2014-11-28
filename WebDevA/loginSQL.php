@@ -1,6 +1,7 @@
 <?php  
 	include("connectDB.php");
 
+	/* Check input and redirect to relevant page */
 	if(isset($_POST['submit'])) {
 		Login();
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
@@ -9,6 +10,7 @@
 		else header("location: login.php");
 	}
 
+	/* Dunction check user details and sets session vars */
 	function Login() {
 		session_start();
 		$_SESSION['loggedin'] = false;
@@ -17,7 +19,7 @@
 		$LPASS = $_POST['pass'];
 
 		if(!empty($LUSER)) {
-			$query = mysql_query("SELECT * FROM Users 
+			$query = mysql_query("SELECT username, password FROM Users 
 										WHERE username = '$LUSER' 
 										AND password = '$LPASS'");
 			$rows = mysql_num_rows($query);

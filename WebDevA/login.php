@@ -9,6 +9,7 @@
 <body>
 <div id="containter">
 
+<!-- Feedback on users actions -->
 	<div id="body">
 		<?php
 			if(isset($_GET['r']) && $_GET['r'] == 1) echo "Registration successful";
@@ -22,6 +23,7 @@
 			}
 		?>
 
+		<!-- Login form -->
 		<fieldset>
 			<legend>Login</legend>
 			<form id="login-form" method="POST" action="loginSQL.php">

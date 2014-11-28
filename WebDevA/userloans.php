@@ -1,6 +1,7 @@
 <?php
 	include("connectDB.php");
 
+	/* Query for finding user reserved books */
 	$result = mysql_query("SELECT bookTitle, author, isbn, reservedDate 
 								FROM Reservations, Books 
 								WHERE Reservations.reserved_username = '$_SESSION[user]' 
@@ -9,6 +10,7 @@
 	echo '<table id="results"><tr>'."\n";
 	$counter = 0;
 
+	/* Desplay a table with results */
 	while($row = mysql_fetch_row($result)) {
 		if($counter != 0 && ($counter%3) == 0 ) {
 			echo "</tr><tr>";

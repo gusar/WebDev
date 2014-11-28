@@ -14,7 +14,7 @@
 
 		<h2 style="text-align:center">Registration</h2>
 
-		
+		<!-- Checks if user pressed register button, and initiates reg script -->
 		<p><?php include("registerSQL.php"); ?></p>
 
 		<table id="register-table" border="0">

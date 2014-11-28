@@ -1,9 +1,11 @@
 <?php
+/* Check if search has been initiated */
 if(!isset($_GET['search']) && !isset($_GET['s'])) {
 	echo '<tr><td colspan="6">Use options above or hit search button for a full list</td></tr>';
 	echo "</table>";
 }
 
+/* Execute code if user pressed search */
 else {
 	include("connectDB.php");
 
@@ -13,17 +15,20 @@ else {
 	if(!isset($_GET['start'])) $start = 0;
 	else $start = $_GET['start'];
 
+	/* Count pages */
 	$limit = 5; 
 	$cur = ($start - 0);
 	$this1 = $cur + $limit;
 	$back = $cur - $limit;
 	$next = $cur + $limit;
 
+	/* Add category if set */
 	if(isset($_GET['cat']) && $_GET['cat'] != "") {
 		$cat = $_GET['cat'];
 	}
 	else $cat = "%";
 
+	/* Create search query string */
 	$query = "SELECT * FROM Books WHERE (isbn LIKE '%$search%' 
 												OR bookTitle LIKE '%$search%' 
 												OR author LIKE '%$search%' 
@@ -33,14 +38,17 @@ else {
 	$search_result = mysql_query($query);
 	$num_rows = mysql_num_rows($search_result);
 
+	/* If no results found */
 	if($num_rows<1) {
 		echo '<tr><td colspan="6">No Results</td></tr>';
 		echo "</table>";
 	}
 
+	/* Limit results to only rows which are relevant */
 	$search_result = mysql_query($query." LIMIT $cur, $limit");
 
 
+	/* Create searc hresults table */
 	while($row = mysql_fetch_row($search_result)) {
 		echo "<tr><td>";
 		echo($row[0]);
@@ -63,6 +71,7 @@ else {
 	}
 	echo "</table>";
 
+	/* Links to next and previous sets of results */
 	echo '<table id="table-nav" border="0"><td>';
 	if($back >= 0) {
 		print "<a href='search.php?start=$back&s=$search&cat=$cat'>PREV</a>";
